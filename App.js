@@ -22,7 +22,7 @@ db.connect((err)=>{
 
     } else {
 
-        console.log("Database connected");
+        console.log("Connected to Database !");
         
     }
 
@@ -59,7 +59,7 @@ app.get("/Query2",(req,res)=>{
 
         } else {
 
-            console.log('Rojer !!');
+            console.log('Ok !!');
             res.send(data);
             res.end();
    
