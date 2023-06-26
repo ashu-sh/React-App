@@ -63,8 +63,7 @@ function App() {
        </table>
        </>
        <br/>
-       <br/>
-    
+       <br/> 
        <table>
         <tbody>
         <tr>
@@ -77,8 +76,6 @@ function App() {
                     <th>Colum 5</th>
                     <th>Colum 6</th>
                     <th>Colum 7</th>
-                    <th>Colum 8</th>
-                    <th>Colum 9</th>
                     <th>Qty</th> 
         </tr>
         {val.map((x,key2)=>{
@@ -93,8 +90,6 @@ function App() {
                             <td>{x.colm_5}</td>
                             <td>{x.colm_6}</td>
                             <td>{x.colm_7}</td>
-                            <td>{x.colm_8}</td>
-                            <td>{x.colm_9}</td>
                             <td>{x.Qty_all}</td>
                          </tr>
                     )
