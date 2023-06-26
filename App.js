@@ -30,9 +30,9 @@ db.connect((err)=>{
 app.get("/",(req,res)=>{
     res.json("Server Started !")
 })
-app.get("/table1",(req,res)=>{
+app.get("/Query1",(req,res)=>{
 
-    let sql = "SELECT*FROM Table_7";
+    let sql = "SELECT * FROM Table_6 WHERE template_type='Earthwork'";
     db.query(sql,(err,data)=>{
 
         if (err) {
@@ -41,16 +41,16 @@ app.get("/table1",(req,res)=>{
 
         } else {
 
-            console.log('Rojer !!!');
+            console.log('Ok !!!');
             res.send(data);
             res.end();
    
         }
     })
 })
-app.get("/table2",(req,res)=>{
+app.get("/Query2",(req,res)=>{
 
-    let sql = "SELECT*FROM Table_10";
+    let sql = "SELECT * FROM Table_6 WHERE template_type='normal'";
     db.query(sql,(err,data)=>{
 
         if (err) {
