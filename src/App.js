@@ -8,8 +8,8 @@ function App() {
   const [val, setVal] = useState([]);
 
   useEffect(() => {
-     const Tabel_1 = fetch("http://localhost:3000/table1").then(res=>res.json())
-     const Tabel_2 = fetch("http://localhost:3000/table2").then(res=>res.json())
+     const Tabel_1 = fetch("http://localhost:3000/Query1").then(res=>res.json())
+     const Tabel_2 = fetch("http://localhost:3000/Query2").then(res=>res.json())
 
      Promise.all([Tabel_1,Tabel_2]).then(([data1,data2])=>{
       setMessage(data1);
@@ -45,17 +45,17 @@ function App() {
                     return (
                         <tr key={key}>
                             <td>{values.id}</td>
-                            <td>{values.Template_Type}</td>
-                            <td>{values.Colum1}</td>
-                            <td>{values.Colum2}</td>
-                            <td>{values.Colum3}</td>
-                            <td>{values.Colum4}</td>
-                            <td>{values.Colum5}</td>
-                            <td>{values.Colum6}</td>
-                            <td>{values.Colum7}</td>
-                            <td>{values.Colum8}</td>
-                            <td>{values.Colum9}</td>
-                            <td>{values.Qty}</td>
+                            <td>{values.template_type}</td>
+                            <td>{values.colm_1}</td>
+                            <td>{values.colm_2}</td>
+                            <td>{values.Colm_3}</td>
+                            <td>{values.colm_4}</td>
+                            <td>{values.colm_5}</td>
+                            <td>{values.colm_6}</td>
+                            <td>{values.colm_7}</td>
+                            <td>{values.colm_8}</td>
+                            <td>{values.colm_9}</td>
+                            <td>{values.Qty_all}</td>
                         </tr>
                     )
                 })}
@@ -64,7 +64,7 @@ function App() {
        </>
        <br/>
        <br/>
-       <h5>Building Data Table 2</h5>
+    
        <table>
         <tbody>
         <tr>
@@ -84,17 +84,17 @@ function App() {
         {val.map((x,key2)=>{
                    return(
                         <tr key={key2}>
-                            <td>{x.Nos}</td>
-                            <td>{x.Template}</td>
-                            <td>{x.Colum_1}</td>
-                            <td>{x.Colum_2}</td>
-                            <td>{x.Colum_3}</td>
-                            <td>{x.Colum_4}</td>
-                            <td>{x.Colum_5}</td>
-                            <td>{x.Colum_6}</td>
-                            <td>{x.Colum_7}</td>
-                            <td>{x.Colum_8}</td>
-                            <td>{x.Colum_9}</td>
+                            <td>{x.id}</td>
+                            <td>{x.template_type}</td>
+                            <td>{x.colm_1}</td>
+                            <td>{x.colm_2}</td>
+                            <td>{x.Colm_3}</td>
+                            <td>{x.colm_4}</td>
+                            <td>{x.colm_5}</td>
+                            <td>{x.colm_6}</td>
+                            <td>{x.colm_7}</td>
+                            <td>{x.colm_8}</td>
+                            <td>{x.colm_9}</td>
                             <td>{x.Qty_all}</td>
                          </tr>
                     )
